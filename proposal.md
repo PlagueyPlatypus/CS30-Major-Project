@@ -6,12 +6,18 @@ I plan on creating a whiteboard website, acting as an online canvas for both wor
 
 ## Needs To Have List
 
+- Usable, interactive canvas that can change colors. Base for every drawing
+
 - A list of usable tools, and multiple presets for each tool
 
-- A side activity, specfically a draw the image sidegame to help jog people's creative juices and showcase a bit more of my knowledge of CS30
+- A side activity, specfically a draw the image sidegame to help jog people's creative juices and showcase a bit more of my knowledge of CS30 
 
 ## Nice to Have List
 
-- Would be great to have a gradiant scale for color selection, allowing much more diversity
+- Would be great to have a gradiant scale for color selection, allowing much more color diversity
 
 - A second sidegame, completely just a game to help people relax, (i.e. like a flow game, or a fill in the space)
+
+- A save work option, an easy way to save work pieces without the use of a third party app
+
+- It WOULD be pretty cool to enable a 3d view/ use of 3d objects
