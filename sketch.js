@@ -11,22 +11,23 @@ function preload() {
   brushimage = loadImage("brush.png");
 }
 
-//brush object
-// class Brush {
-//   constructor() {
-//     this.x = winMouseX;
-//     this.y = winMouseY;
-//     this.px = pwinMouseX;
-//     this.py = pwinMouseY;
-//   }
+// brush object
+class Brush {
+  constructor() {
+    this.x = winMouseX;
+    this.y = winMouseY;
+    this.px = pwinMouseX;
+    this.py = pwinMouseY;
+    print(pwinMouseX);
+  }
 
-//   show() {
-//     stroke(0);
-//     line(this.x, this.y, this.px, this.py);
-//   }
-// }
+  show() {
+    stroke(0);
+    line(this.x, this.y, this.px, this.py);
+  }
+}
 
-// let lines = []
+let lines = [];
 
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
@@ -34,14 +35,11 @@ function setup() {
   imageMode(CENTER);
 }
 
-//brush show details
-// function mousePressed() {
-//   let line = new Brush()
-//   lines.push(line);
-//   for (let i = 0; i < lines; i++) {
-//     line.show();
-//   }
-// }
+// brush show details
+function mousePressed() {
+  let line = new Brush();
+  lines.push(line);
+}
 
 //testing new scripts for colour gradient
 // function createColorPicker() {
@@ -76,14 +74,13 @@ function setup() {
 //   image(colorPicker, 400, 0)
 // }
 
-// function draw() {
-//   background("white");
-//   mousePressed();
-// }
 
 
 function draw() {
   background(220);
+  for (let i = 0; i < lines; i++) {
+    lines[i].show();
+  }
   //cursor
   image(brushimage, mouseX, mouseY, 25, 25);
   noCursor();
