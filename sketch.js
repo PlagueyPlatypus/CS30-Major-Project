@@ -5,8 +5,10 @@
 // Extra for Experts:
 // - describe what you did to take this project "above and beyond"
 
+let brushimage;
+
 function preload() {
-  fishimage = loadImage("brush.png");
+  brushimage = loadImage("brush.png");
 }
 
 //brush object
@@ -42,37 +44,37 @@ function setup() {
 // }
 
 //testing new scripts for colour gradient
-function createColorPicker() {
-  colorPicker = createImage(100, height);
-  let myWidth = colorPicker.width/3
-  colorPicker.loadPixels()
-  from = color(0, 255, 0);
-  to = color(255, 0, 0);
-  for (let y = 0; y < height; y++) {
-    for (x = 0; x < myWidth; x++) {
-      color1 = lerpColor(from, to, y / height)
-      colorPicker.set(x, y, color1)
-    }
-  }
-  from = color(0, 0, 255);
-  to = color(0, 255, 0);
-  for (let y = 0; y < height; y++) {
-    for (x = myWidth; x < myWidth* 2; x++) {
-      color1 = lerpColor(from, to, y / height)
-      colorPicker.set(x, y, color1)
-    }
-  }
-  from = color(255, 0, 0);
-  to = color(0, 255, 255);
-  for (let y = 0; y < height; y++) {
-    for (x = myWidth*2; x < myWidth * 3; x++) {
-      color1 = lerpColor(from, to, y / height)
-      colorPicker.set(x, y, color1)
-    }
-  }
-  colorPicker.updatePixels()
-  image(colorPicker, 400, 0)
-}
+// function createColorPicker() {
+//   colorPicker = createImage(100, height);
+//   let myWidth = colorPicker.width/3
+//   colorPicker.loadPixels()
+//   from = color(0, 255, 0);
+//   to = color(255, 0, 0);
+//   for (let y = 0; y < height; y++) {
+//     for (x = 0; x < myWidth; x++) {
+//       color1 = lerpColor(from, to, y / height)
+//       colorPicker.set(x, y, color1)
+//     }
+//   }
+//   from = color(0, 0, 255);
+//   to = color(0, 255, 0);
+//   for (let y = 0; y < height; y++) {
+//     for (x = myWidth; x < myWidth* 2; x++) {
+//       color1 = lerpColor(from, to, y / height)
+//       colorPicker.set(x, y, color1)
+//     }
+//   }
+//   from = color(255, 0, 0);
+//   to = color(0, 255, 255);
+//   for (let y = 0; y < height; y++) {
+//     for (x = myWidth*2; x < myWidth * 3; x++) {
+//       color1 = lerpColor(from, to, y / height)
+//       colorPicker.set(x, y, color1)
+//     }
+//   }
+//   colorPicker.updatePixels()
+//   image(colorPicker, 400, 0)
+// }
 
 // function draw() {
 //   background("white");
@@ -83,9 +85,9 @@ function createColorPicker() {
 function draw() {
   background(220);
   //cursor
-  image(brushimage, mouseX, mouseY, fishimage.width*scalar, fishimage.height*scalar);
+  image(brushimage, mouseX, mouseY, 25, 25);
   noCursor();
 
   //gradiance scale
-  radius = slider.value();
+  // radius = slider.value();
 }
