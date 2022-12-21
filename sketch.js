@@ -14,16 +14,17 @@ function preload() {
 // brush object
 class Brush {
   constructor() {
-    this.x = winMouseX;
-    this.y = winMouseY;
-    this.px = pwinMouseX;
-    this.py = pwinMouseY;
-    print(pwinMouseX);
+    this.x = mouseX;
+    this.y = mouseY;
+    this.px = pmouseX;
+    this.py = pmouseY;
+    print(mouseX);
+    print(pmouseX);
   }
 
   show() {
     stroke(0);
-    line(this.x, this.y, this.px, this.py);
+    line(this.px, this.py, this.x, this.y);
   }
 }
 
@@ -33,6 +34,9 @@ function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.center("horizontal");
   imageMode(CENTER);
+  for (let element of document.getElementsByClassName("p5Canvas")) {
+    element.addEventListener("contextmenu", (e) => e.preventDefault());
+  }
 }
 
 // brush show details
